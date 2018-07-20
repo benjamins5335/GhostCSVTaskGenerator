@@ -11,7 +11,7 @@ Quick script made by me that creates tasks for ghost in a csv file very quickly.
 
 # Steps for running
 
-1, Run the script
+1. Run the script
 2. Answer the questions when prompted
 3. You will be told when it's done; look at ghost_tasks.csv and everything should be good.
 4. Go onto ghost and import tasks, find the csv file and you're done
