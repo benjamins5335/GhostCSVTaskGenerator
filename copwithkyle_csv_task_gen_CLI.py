@@ -1,11 +1,11 @@
 import csv
 import math
 
-def get_sku(): #good
+def get_sku():
     sku = input("What is the sku of the shoe? (in format 'XXXXXX-XXX')")
     return sku
 
-def accounts_gen(): #good
+def accounts_gen():
     accounts = []
     p=open("ghostaccounts.txt","r")
     accounts = p.readlines()
@@ -15,7 +15,7 @@ def accounts_gen(): #good
 
     return no_accounts, accounts
 
-def proxy_gen(): #good
+def proxy_gen():
     p = open("ghostproxies.txt","r")
     proxies = p.readlines()
     no_proxies = len(proxies)
@@ -74,7 +74,7 @@ def profile_gen(no_proxies,no_accounts):
             
     return no_profiles, profiles_array, rdm_apts, rdm_names, rdm_phones, maximum
 
-def assess_max(no_proxies,no_tasks,no_accounts): #good
+def assess_max(no_proxies,no_tasks,no_accounts):
     print("There are " + str(no_proxies) + " proxies available, " + str(no_tasks) + " tasks able to be used by by the profiles, and " + str(no_accounts) + " accounts available")
     maximum = no_proxies
     if no_tasks < maximum:
@@ -135,7 +135,7 @@ def find_remainder(maximum,accs_per_size_rounded,no_sizes):
         remainder_mode = None
     return remainder_mode, remainder
 
-def write_to_csv(maximum): #good
+def write_to_csv(maximum):
     print("Writing " + str(maximum) + " tasks to csv file...")
     with open('ghost_tasks.csv','w',newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
